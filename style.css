@@ -384,3 +384,62 @@ html:not(.js) .dock{display:none}
 .flow-video figcaption span{opacity:.88}
 .weg-video .textlink{display:inline-block;margin-top:6px}
 @media (min-width:760px){.flow-video{grid-template-columns:280px 1fr;align-items:center;gap:32px;margin-top:56px}}
+
+/* Vertrauen unter dem Hero */
+.trust{background:var(--paper);padding-block:clamp(26px,4vw,40px) 0}
+.trust-in{display:grid;gap:14px;justify-items:start;max-width:46rem}
+.trust-rating{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font-weight:700;font-size:.98rem;color:var(--brown)}
+.trust-rating .stars{color:var(--gold);letter-spacing:.08em;filter:saturate(1.2) brightness(.9)}
+.trust-quote blockquote p{font-family:var(--serif);font-size:clamp(1.05rem,3.9vw,1.25rem);line-height:1.6;color:var(--ink)}
+.trust-quote figcaption{margin-top:8px;font-size:.92rem;font-weight:650;color:var(--brown)}
+
+/* Mobile Feinschliff: Tippflächen und Mindestschrift */
+.textlink{display:inline-flex;align-items:center;min-height:44px}
+.footer-links{gap:0 24px}
+.footer-links a{display:inline-flex;align-items:center;min-height:44px}
+.contact-line{display:inline-flex;align-items:center;min-height:44px}
+.contact-lines{gap:2px}
+.weg-video .textlink{display:inline-flex;margin-top:0}
+.flow-video figcaption .textlink{min-height:44px}
+.tag{font-size:.875rem}
+.note-box h3,.weg h3,.creds h3{font-size:.875rem}
+.price span{font-size:.875rem}
+.q-src{font-size:.875rem}
+.footer-small{font-size:.92rem}
+.nav-fallback a{display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:599px){
+  .hero-cta{gap:4px}
+  .btn{min-height:52px}
+  .offer .btn{min-height:48px}
+}
+.mark{min-height:44px}
+.trust-quote{border-left:3px solid var(--gold);padding-left:16px}
+.trust{padding-top:clamp(30px,4vw,44px)}
+.trust-in{max-width:none}
+.trust-quote{max-width:46rem}
+.menu-foot a:not(.btn),.menu a.menu-mail{display:inline-flex;align-items:center;min-height:44px}
+.menu-mail{display:flex;align-items:center;justify-content:center;min-height:44px}
+
+/* Über mich: Mehr lesen */
+.more{margin-top:8px;max-width:34em}
+.more-btn{list-style:none;display:inline-flex;align-items:center;gap:12px;min-height:50px;padding:10px 22px;border:2px solid var(--gold);border-radius:14px;color:var(--gold-soft);font-weight:750;font-size:1.02rem;cursor:pointer;user-select:none;transition:background-color .2s,color .2s,border-color .2s}
+.more-btn::-webkit-details-marker{display:none}
+.more-btn::after{content:"";width:9px;height:9px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .25s}
+.more[open] .more-btn::after{transform:translateY(2px) rotate(-135deg)}
+@media (hover:hover){.more-btn:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}}
+.more-close{background:transparent;font-family:inherit;line-height:1.2}
+.more-close::after{transform:translateY(2px) rotate(-135deg)}
+.more-close-wrap{margin-top:28px}
+html:not(.js) .more-close-wrap{display:none}
+.more-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.more-open{display:none}
+.more[open] .more-open{display:inline}
+.more[open] .more-closed{display:none}
+.more-body{padding-top:26px;animation:moreIn .3s ease}
+@keyframes moreIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.weg-rest{margin-top:0}
+.how{margin-top:30px}
+.how h3{font-family:var(--sans);font-size:.875rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--gold-soft);margin-bottom:14px}
+.more-body .creds{margin-top:30px}
+.about-text .more+.boundary,.about-text>.boundary{margin-top:28px}
+@media (prefers-reduced-motion:reduce){.more-body{animation:none}.more-btn::after{transition:none}}
