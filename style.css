@@ -702,3 +702,4 @@ h3,h4{color:var(--ink)}
 .btn-lg.btn-gold{font-size:1.12rem}
 @media (max-width:599px){.hero-cta .textlink.hide-mobile,.facts.hide-mobile{display:none}}
 @media (max-width:599px){.hero .hero-cta{margin-bottom:36px}}
+@media (max-width:599px){#coaching-geschenk .sec-head{display:none}#coaching-geschenk{padding-top:36px}.gift .gift-alt-lead{margin-bottom:0}.gift .gift-alt-lead+.gift-alt{margin-top:-18px}}
