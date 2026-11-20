@@ -700,3 +700,5 @@ h3,h4{color:var(--ink)}
 /* v5: Coaching-Geschenk-Button ueberall gold, etwas groessere fette Schrift */
 .btn.btn-gold{font-size:1.1rem;font-weight:800}
 .btn-lg.btn-gold{font-size:1.12rem}
+@media (max-width:599px){.hero-cta .textlink.hide-mobile,.facts.hide-mobile{display:none}}
+@media (max-width:599px){.hero .hero-cta{margin-bottom:36px}}
