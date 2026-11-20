@@ -360,12 +360,6 @@ h3{font-size:1.2rem;line-height:1.3;font-weight:700;color:var(--brown)}
 .footer-small{margin-top:30px;padding-top:22px;border-top:1px solid var(--line-light);font-size:.88rem;opacity:.8}
 @media (min-width:760px){.footer-grid{grid-template-columns:1fr auto;align-items:end}}
 
-/* Schnellzugriff mobil */
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(255,253,249,.97) 70%,rgba(255,253,249,0));transform:translateY(110%);transition:transform .3s ease;pointer-events:none}
-.dock.is-on{transform:none;pointer-events:auto}
-html:not(.js) .dock{display:none}
-@media (min-width:600px){.dock{display:none}}
-
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 /* Rechtliche Seiten */
@@ -461,3 +455,210 @@ html:not(.js) .more-close-wrap{display:none}
   .hero-photo img{object-position:50% 12%}
 }
 .weg>.weg-video{margin-bottom:18px}
+
+/* ===== v3: ruhigere Farbregeln, Lesbarkeit, Barrierefreiheit =====
+   Gold nur noch für den Geschenk-Button im Einstieg. Auf Grün und Braun ist alles weiß. */
+
+/* Fokus: dunkel auf hellen Flächen, weiß auf dunklen Flächen */
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.section-green :focus-visible,.section-brown :focus-visible,.gift :focus-visible,.themes-foot :focus-visible,.menu :focus-visible,.footer :focus-visible,.skip:focus-visible{outline-color:#fff}
+.more-btn:focus-visible{outline-color:#fff}
+
+/* neutraler heller Button für dunkle Flächen */
+.btn-light{background:#fff;color:var(--green);border-color:#fff}
+.btn-light:hover{background:var(--cream);border-color:var(--cream);box-shadow:0 10px 22px -12px rgba(0,0,0,.5)}
+.section-brown .btn-light,.gift .btn-light{color:var(--brown)}
+.btn-lg.btn-light::after{content:"\2192";font-weight:600;transition:transform .2s ease}
+.btn-lg.btn-light:hover::after{transform:translateX(4px)}
+
+/* Etiketten und Linien: keine Goldakzente mehr */
+.label::before,.kicker::before{background:currentColor;opacity:.55}
+.label-light{color:#fff}
+.tag{color:#fff}
+.tag-green{color:var(--green)}
+.tag-brown{color:var(--brown)}
+.note-box h3,.weg h3,.creds h3,.how h3{color:#fff}
+.boundary{color:#fff;border-left-color:rgba(255,255,255,.7)}
+.steps li::before,.gift-steps li::before{color:#fff}
+.creds li::before{background:#fff}
+.terms li::before,.bullets li::before{background:var(--green)}
+.facts li::before{background:var(--green)}
+.pull,.trust-quote{border-left-color:var(--green)}
+.gift::before{display:none}
+.nav-desktop a{background-image:linear-gradient(var(--green),var(--green))}
+.menu-nav a::after{color:#fff;opacity:.75}
+.menu-nav a:active,.menu-nav a:hover{color:var(--cream)}
+
+/* Links: hell = Textfarbe unterstrichen, dunkel = weiß unterstrichen */
+.textlink,.menu-mail,.contact-line,.footer-links a,.legal a:not(.textlink){text-decoration-color:currentColor}
+.textlink{text-decoration-thickness:1.5px}
+.section-green .textlink,.section-brown .textlink{color:#fff}
+
+/* Mehr lesen auf Braun */
+.more-btn{border-color:rgba(255,255,255,.75);color:#fff}
+@media (hover:hover){.more-btn:hover{background:#fff;color:var(--brown);border-color:#fff}}
+
+/* Themen: Karten ohne Goldkante */
+.topics li{border-top:0}
+.topic-no::before{color:var(--brown);filter:none;opacity:.75}
+.themes-foot .btn-light{color:var(--green)}
+
+/* Kopf: Geschenk als Textlink */
+.bar-cta{display:none}
+@media (min-width:600px){
+  .bar-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font-weight:750;font-size:1.02rem;color:var(--brown);text-decoration:underline;text-underline-offset:.24em;text-decoration-thickness:1.5px;white-space:nowrap;background:none;box-shadow:none;border:0}
+  .bar-cta:hover{color:var(--green)}
+}
+@media (min-width:960px) and (max-width:1199px){
+  .nav-desktop{gap:18px;font-size:1rem}
+  .nav-desktop a{font-size:1rem}
+  .mark{font-size:1.3rem}
+  .bar-cta{font-size:.98rem}
+}
+
+/* Einstieg: kürzere Einführung */
+.hero .lead{max-width:22em}
+.hero-text{max-width:30em}
+
+/* Kennenlernen: Geschenk und Erstgespräch nebeneinander */
+#coaching-geschenk .intro-call{background:var(--paper);box-shadow:0 1px 0 var(--line),0 18px 30px -26px rgba(99,53,20,.45)}
+.intro-call p:not(.tag):not(.small-note){font-size:1.04rem;line-height:1.65}
+.intro-call .tag{margin-bottom:0}
+.intro-call .btn{width:100%}
+.intro-call .small-note a{overflow-wrap:anywhere;text-underline-offset:.2em}
+@media (min-width:600px){.intro-call .btn{width:auto}}
+@media (min-width:1000px){
+  #coaching-geschenk .duo{grid-template-columns:1fr}
+  #coaching-geschenk .intro-call{display:grid;grid-template-columns:1fr auto;column-gap:48px;align-items:center}
+  #coaching-geschenk .intro-call .tag,#coaching-geschenk .intro-call h3,#coaching-geschenk .intro-call p:not(.small-note){grid-column:1}
+  #coaching-geschenk .intro-call .btn{grid-column:2;grid-row:1 / span 3;margin:0;align-self:center}
+  #coaching-geschenk .intro-call .small-note{grid-column:2;grid-row:4;margin:0;align-self:start}
+}
+
+/* Ablauf: drei Schritte, danach die Arbeitsweise */
+@media (min-width:760px){
+  .steps{grid-template-columns:repeat(3,1fr);column-gap:clamp(28px,3.5vw,52px)}
+  .steps li:nth-last-child(-n+3){border-bottom:1px solid var(--line-light)}
+}
+.how-title{margin-top:clamp(40px,5vw,60px);margin-bottom:16px;font-family:var(--sans);font-size:.875rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#fff}
+.how-list{display:grid;gap:12px}
+.how-list li{padding:20px 22px;border:1px solid var(--line-light);border-radius:var(--r);background:rgba(0,0,0,.12)}
+.how-list h4{font-family:var(--serif);font-size:1.12rem;line-height:1.3;font-weight:700;color:#fff;margin-bottom:8px}
+.how-list p{font-size:1rem;line-height:1.65}
+@media (min-width:1000px){.how-list{grid-template-columns:repeat(3,1fr);gap:18px}}
+
+/* Angebote: E-Mail direkt bei den Karten */
+.offer-mail{font-size:.98rem;line-height:1.62}
+.offer-mail a{font-weight:700;overflow-wrap:anywhere;text-underline-offset:.2em}
+@media (min-width:1000px){.offer-foot .offer-mail{grid-column:1 / -1}}
+
+/* Stimmen: untereinander statt seitlich wischen, Google-Link dezent */
+.quotes{display:grid;gap:14px;overflow:visible;margin-inline:0;padding:0;scroll-snap-type:none}
+.quote{flex:none;border-top:0}
+.quote blockquote::before{color:var(--brown);opacity:.35}
+.q-src{font-weight:600}
+.quotes-more{font-size:.92rem}
+.quotes-more a{color:var(--brown);text-underline-offset:.2em;display:inline-flex;align-items:center;min-height:44px}
+@media (min-width:760px){.quotes{grid-template-columns:repeat(2,1fr);gap:20px}}
+@media (min-width:900px){.quotes{grid-template-columns:repeat(2,1fr)}}
+
+/* Sprungziele innerhalb von Abschnitten nicht unter der festen Kopfzeile */
+article[id]{scroll-margin-top:84px}
+@media (max-width:599px){.gift .btn,.intro-call .btn{padding-inline:16px}}
+.offer-mail a,.intro-call .small-note a{display:inline-block;max-width:100%;overflow-wrap:anywhere}
+/* Kundenstimme unter dem Einstieg an der Inhaltskante ausrichten (war am Desktop ganz links) */
+.wrap.trust-in{max-width:1200px}
+.video-core{font-family:var(--serif);font-size:1.05rem;line-height:1.6;margin-top:6px;padding-left:16px;border-left:3px solid rgba(255,255,255,.6)}
+/* Punkte in der Faktenzeile an der ersten Textzeile ausrichten (auch bei Umbruch) */
+.facts li::before{top:24px;margin-top:0}
+@media (min-width:900px){.facts li::before{top:29px}}
+
+/* Ablauf kompakt: drei Schritte sichtbar, Rest unter "Mehr lesen" */
+#ablauf .flow-head{margin-bottom:clamp(24px,4vw,48px)}
+#ablauf .flow-head h2{margin-bottom:14px}
+#ablauf .flow-head .big{max-width:38em}
+.flow-boundary{margin-top:18px;font-size:.95rem;line-height:1.5;opacity:.9}
+.flow-more{margin-top:18px;max-width:none}
+.flow-more .how-title{margin-top:4px}
+.flow-more .note-box{margin:0 0 24px;align-self:auto}
+@media (max-width:759px){
+  #ablauf{padding-block:44px}
+  #ablauf .flow-head .big{font-size:1.02rem;line-height:1.6}
+  #ablauf .steps li{padding:12px 0 12px 44px}
+  #ablauf .steps li::before{top:10px;font-size:1.7rem}
+  #ablauf .steps h3{font-size:1.06rem;margin-bottom:2px}
+  #ablauf .steps p{font-size:.97rem;line-height:1.5}
+}
+@media (min-width:1000px){
+  #ablauf .flow-head{grid-template-columns:1fr}
+  .flow-more .note-box{max-width:46rem}
+}
+#ablauf .flow-video{margin-top:32px}
+@media (max-width:759px){
+  #ablauf{padding-block:40px}
+  #ablauf .label{margin-bottom:12px}
+  #ablauf .flow-head .big{font-size:.98rem;line-height:1.55}
+  #ablauf .flow-head{margin-bottom:18px}
+  #ablauf .steps li{padding:10px 0 10px 42px}
+  #ablauf .steps li::before{top:8px}
+  .flow-more{margin-top:14px}
+  .flow-more>.more-btn{min-height:46px}
+}
+@media (hover:hover){#ablauf .more-btn:hover{color:var(--green)}}
+
+/* Farbfolge: Braun nur für Persönliches (Über mich), Grün für Ablauf/Kontakt, Beige für Angebote */
+.gift.gift-light{background:var(--paper);color:var(--ink);box-shadow:0 1px 0 var(--line),0 18px 30px -26px rgba(99,53,20,.45)}
+.gift.gift-light::after{display:none}
+.gift.gift-light h3{color:var(--brown)}
+.gift.gift-light .gift-steps{border-color:var(--line)}
+.gift.gift-light .gift-steps li{border-bottom-color:var(--line)}
+.gift.gift-light .gift-steps li::before{color:var(--green)}
+.gift.gift-light .gift-note{opacity:.85}
+.gift.gift-light :focus-visible{outline-color:var(--green)}
+@media (min-width:1000px){.gift.gift-light .gift-steps{border-left-color:var(--line)}}
+/* Einladung unter den Themen: helle Karte statt grüner Fläche direkt vor dem grünen Ablauf */
+.themes-foot{background:var(--paper);color:var(--ink);box-shadow:0 1px 0 var(--line),0 18px 30px -26px rgba(99,53,20,.45)}
+.themes-foot .invite{color:var(--green)}
+.themes-foot .btn-light{background:var(--green);color:#fff;border-color:var(--green)}
+.themes-foot .btn-light:hover{background:#24603a;border-color:#24603a}
+.themes-foot :focus-visible{outline-color:var(--green)}
+/* weniger Schmucklinien vor kleinen Etiketten */
+.label::before,.kicker::before{display:none}
+
+/* ===== Ruhige Farbregel (20.11.2026) =====
+   Helle Flächen: alles Text in einem dunklen Braun-Schwarz (--ink).
+   Grün nur für h1/h2 und Buttons, Gold nur für den Geschenk-Button im Einstieg.
+   Grüne und braune Flächen: weiß (unverändert). Akzente: --ink mit niedriger Deckkraft. */
+:root{--ink:#2A1E16;--line:rgba(42,30,22,.14);--accent:rgba(42,30,22,.28)}
+body{color:var(--ink)}
+h2{color:var(--green)}
+h3,h4{color:var(--ink)}
+.topics h3,.offer h4,.intro-call h3,.course h3,.news h3,.gift.gift-light h3,.legal h3{color:var(--ink)}
+.group-title{color:var(--ink);border-bottom-color:var(--accent)}
+.lead,.hero .lead{color:var(--ink)}
+.kicker,.label:not(.label-light){color:var(--ink)}
+.tag-green,.tag-brown{color:var(--ink)}
+.pull{color:var(--ink);border-left-color:var(--accent)}
+.invite,.themes-foot .invite{color:var(--ink)}
+.price,.price span{color:var(--ink)}
+.client-line{color:var(--ink)}
+.facts li{color:var(--ink)}
+.facts li::before,.terms li::before,.bullets li::before{background:var(--ink);opacity:.45}
+.topic-no::before{color:var(--ink);opacity:.72}
+.gift.gift-light .gift-steps li::before{color:var(--ink)}
+.trust-quote{border-left-color:var(--accent)}
+.trust-quote figcaption,.q-name,.q-src{color:var(--ink)}
+.quote blockquote::before{color:var(--ink);opacity:.25}
+.quotes-more a,.offer-mail a,.intro-call .small-note a{color:var(--ink)}
+.course{border:1px solid var(--accent)}
+.offer-foot{border-color:var(--line)}
+.nav-desktop a{color:var(--ink);background-image:linear-gradient(var(--ink),var(--ink))}
+.bar-cta,.bar-cta:hover{color:var(--ink)}
+.burger{color:var(--ink);border-color:rgba(42,30,22,.45)}
+.burger[aria-expanded="true"]{color:#fff;border-color:var(--green)}
+.nav-fallback a{color:var(--ink)}
+.mark-dot{background:var(--green);box-shadow:0 0 0 4px rgba(28,75,41,.14)}
+.legal h2{color:var(--green)}
+.topic-no::before{opacity:.8}
+.hero::before,.contact::after{display:none}
+.btn-brown{background:var(--green);color:#fff}.btn-brown:hover{background:#24603a;box-shadow:0 10px 22px -12px rgba(28,75,41,.8)}

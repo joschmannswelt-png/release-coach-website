@@ -28,11 +28,12 @@
     <a class="mark" href="index.html" aria-label="Release Coach, zum Seitenanfang"><span class="mark-dot" aria-hidden="true"></span>Release Coach</a>
     <nav class="nav-desktop" aria-label="Hauptnavigation">
       <a href="index.html#ablauf">Begleitung</a>
+      <a href="index.html#angebote">Angebote &amp; Preise</a>
       <a href="index.html#ueber-mich">Über mich</a>
       <a href="index.html#aktuell">Aktuell</a>
       <a href="index.html#kontakt">Kontakt</a>
     </nav>
-    <a class="btn btn-gold btn-sm bar-cta" href="https://bc2cb3da.sibforms.com/serve/MUIFAJO5Aaq8Q-L8ME5C0bmeWpciAulMvIboxKs2_8GwHY4pw1wSA3NEGLPQdqmkzlaiPOa0AFC3SebU4FIWc-fOFWNzHI5ZPOaomhay47IJsoWMtYYN1-hPAGyUnSo4rpiPRRio-33y-gQ7QOrFiMpm2bNGhgyWVqz9HWlRnIe9xonscYe1npSNPoqHyMx2aAXGeeO-jFhiPWzA" target="_blank" rel="noopener">Coaching-Geschenk</a>
+    <a class="bar-cta" href="https://bc2cb3da.sibforms.com/serve/MUIFAJO5Aaq8Q-L8ME5C0bmeWpciAulMvIboxKs2_8GwHY4pw1wSA3NEGLPQdqmkzlaiPOa0AFC3SebU4FIWc-fOFWNzHI5ZPOaomhay47IJsoWMtYYN1-hPAGyUnSo4rpiPRRio-33y-gQ7QOrFiMpm2bNGhgyWVqz9HWlRnIe9xonscYe1npSNPoqHyMx2aAXGeeO-jFhiPWzA" target="_blank" rel="noopener">Coaching-Geschenk</a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü öffnen">
       <span class="burger-label">Menü</span>
       <span class="burger-icon" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -40,7 +41,7 @@
   </div>
   <noscript>
     <nav class="nav-fallback" aria-label="Hauptnavigation ohne Skript">
-      <a href="index.html#ablauf">Begleitung</a><a href="index.html#ueber-mich">Über mich</a><a href="index.html#aktuell">Aktuell</a><a href="index.html#kontakt">Kontakt</a>
+      <a href="index.html#ablauf">Begleitung</a><a href="index.html#angebote">Angebote &amp; Preise</a><a href="index.html#ueber-mich">Über mich</a><a href="index.html#aktuell">Aktuell</a><a href="index.html#kontakt">Kontakt</a>
     </nav>
   </noscript>
 </header>
@@ -48,12 +49,13 @@
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menü" hidden>
   <nav class="menu-nav" aria-label="Hauptnavigation mobil">
     <a href="index.html#ablauf">Begleitung</a>
+    <a href="index.html#angebote">Angebote &amp; Preise</a>
     <a href="index.html#ueber-mich">Über mich</a>
     <a href="index.html#aktuell">Aktuell</a>
     <a href="index.html#kontakt">Kontakt</a>
   </nav>
   <div class="menu-foot">
-    <a class="btn btn-gold btn-block" href="https://bc2cb3da.sibforms.com/serve/MUIFAJO5Aaq8Q-L8ME5C0bmeWpciAulMvIboxKs2_8GwHY4pw1wSA3NEGLPQdqmkzlaiPOa0AFC3SebU4FIWc-fOFWNzHI5ZPOaomhay47IJsoWMtYYN1-hPAGyUnSo4rpiPRRio-33y-gQ7QOrFiMpm2bNGhgyWVqz9HWlRnIe9xonscYe1npSNPoqHyMx2aAXGeeO-jFhiPWzA" target="_blank" rel="noopener">Coaching-Geschenk sichern</a>
+    <a class="btn btn-light btn-block" href="https://bc2cb3da.sibforms.com/serve/MUIFAJO5Aaq8Q-L8ME5C0bmeWpciAulMvIboxKs2_8GwHY4pw1wSA3NEGLPQdqmkzlaiPOa0AFC3SebU4FIWc-fOFWNzHI5ZPOaomhay47IJsoWMtYYN1-hPAGyUnSo4rpiPRRio-33y-gQ7QOrFiMpm2bNGhgyWVqz9HWlRnIe9xonscYe1npSNPoqHyMx2aAXGeeO-jFhiPWzA" target="_blank" rel="noopener">Coaching-Geschenk sichern</a>
     <a class="menu-mail" href="mailto:johannesfischer@release-coach.de">johannesfischer@release-coach.de</a>
   </div>
 </div>
@@ -113,6 +115,7 @@
     b.setAttribute('aria-expanded',open); b.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
     b.querySelector('.burger-label').textContent=open?'Schließen':'Menü';
     m.hidden=!open; d.documentElement.classList.toggle('menu-open',open);
+    [d.getElementById('inhalt'),d.querySelector('.footer')].forEach(function(el){if(el){if(open){el.setAttribute('inert','')}else{el.removeAttribute('inert')}}});
     if(open){m.querySelector('a').focus()}else{b.focus()}
   }
   b.addEventListener('click',function(){setMenu(b.getAttribute('aria-expanded')!=='true')});
@@ -123,8 +126,8 @@
     if(e.key==='Tab'){
       var f=[].slice.call(m.querySelectorAll('a')).concat([b]);
       var i=f.indexOf(d.activeElement);
-      if(e.shiftKey&&(i<=0)){e.preventDefault();f[f.length-1].focus()}
-      else if(!e.shiftKey&&(i===f.length-1)){e.preventDefault();f[0].focus()}
+      e.preventDefault();
+      f[(i+(e.shiftKey?-1:1)+f.length)%f.length].focus()
     }
   });
   window.matchMedia('(min-width:960px)').addEventListener('change',function(q){if(q.matches&&!m.hidden)setMenu(false)});
