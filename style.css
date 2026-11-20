@@ -155,6 +155,7 @@ h3{font-size:1.2rem;line-height:1.3;font-weight:700;color:var(--brown)}
   .hero-photo img{object-position:50% 7%}
   .kicker{margin-bottom:12px}
   .hero h1{margin-bottom:14px}
+  .hide-mobile{display:none}
 }
 @media (min-width:600px){
   .hero-cta{flex-direction:row;align-items:center;flex-wrap:wrap;gap:16px 26px}
@@ -662,3 +663,40 @@ h3,h4{color:var(--ink)}
 .topic-no::before{opacity:.8}
 .hero::before,.contact::after{display:none}
 .btn-brown{background:var(--green);color:#fff}.btn-brown:hover{background:#24603a;box-shadow:0 10px 22px -12px rgba(28,75,41,.8)}
+
+/* Angebote: Nebeninfos hinter "Mehr lesen" (gleiches Muster wie Ablauf und Über mich), auf hellem Grund */
+#angebote .offer-more{margin-top:18px;max-width:none}
+#angebote .offer-more>.more-btn{min-height:48px;border-color:var(--green);color:var(--green);background:transparent}
+@media (hover:hover){#angebote .offer-more>.more-btn:hover{background:var(--green);color:#fff;border-color:var(--green)}}
+#angebote .offer-more>.more-btn:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+#angebote .offer-more .more-body{padding-top:18px}
+#angebote .offer-more .terms{margin-top:0}
+.offer-foot .offer-more{margin-top:6px}
+.offer-foot .offer-more .more-body{display:grid;gap:10px}
+@media (min-width:1000px){
+  .offer-foot{grid-template-columns:1fr}
+  .offer-foot .offer-more .more-body{grid-template-columns:1fr 1fr;column-gap:48px}
+}
+
+/* v5: Geschenk-Abschnitt direkt nach Hero und Stimme, auf hellem Grund (Wechsel: Hero creme, Geschenk hell, Themen creme, Ablauf grün) */
+#coaching-geschenk .gift.gift-light,#coaching-geschenk .intro-call{background:var(--cream);box-shadow:none}
+.only-mobile{display:none}
+@media (max-width:599px){
+  .only-mobile{display:inline-flex}
+  .gift .gift-alt{display:flex;width:fit-content;max-width:100%;min-height:44px;padding:8px 16px;font-size:.84rem;margin:0 auto;text-align:center;white-space:nowrap}
+  .gift .gift-alt-lead{display:block;text-align:center;font-size:.9rem;margin:18px 0 6px;color:var(--ink)}
+  .intro-call.hide-mobile{display:none}
+}
+
+/* v5, Variante A (aktiv): Kacheln "Worum es gehen kann" auf dem Handy einspaltig, aber kompakter. Desktop und Tablet unverändert. */
+@media (max-width:599px){
+  .topics{gap:14px}
+  .topics li{padding:16px 18px 18px}
+  .topic-no::before{font-size:.78rem;margin-bottom:3px}
+  .topics h3{font-size:1.02rem;line-height:1.3;margin-bottom:4px}
+  .topics p{font-size:.94rem;line-height:1.5}
+}
+
+/* v5: Coaching-Geschenk-Button ueberall gold, etwas groessere fette Schrift */
+.btn.btn-gold{font-size:1.1rem;font-weight:800}
+.btn-lg.btn-gold{font-size:1.12rem}
