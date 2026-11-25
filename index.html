@@ -29,7 +29,7 @@
 <link rel="preload" href="assets/fonts/figtree-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Release Coach · Johannes Fischer","description":"Persönliche Begleitung bei Gedankenkreisen und Grübeln, Selbstwert und emotionaler Klärung. Keine Psychotherapie.","url":"https://release-coach.de/","image":"https://release-coach.de/assets/img/og-image.jpg","email":"johannesfischer@release-coach.de","telephone":"+491736289187","address":{"@type":"PostalAddress","addressLocality":"Xanten","addressCountry":"DE"},"areaServed":[{"@type":"City","name":"Xanten"},{"@type":"Country","name":"Deutschland"}],"founder":{"@type":"Person","name":"Johannes Fischer"},"sameAs":["https://www.instagram.com/release_coach/","https://www.google.com/maps?cid=7909192929721564540"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Release Coach · Johannes Fischer","description":"Persönliche Begleitung bei Gedankenkreisen und Grübeln, Selbstwert und emotionaler Klärung. Keine Psychotherapie.","url":"https://release-coach.de/","image":"https://release-coach.de/assets/img/og-image.jpg","email":"johannesfischer@release-coach.de","telephone":"+491736289187","address":{"@type":"PostalAddress","streetAddress":"Niederstraße 28","postalCode":"46509","addressLocality":"Xanten","addressCountry":"DE"},"areaServed":[{"@type":"City","name":"Xanten"},{"@type":"Country","name":"Deutschland"}],"founder":{"@type":"Person","name":"Johannes Fischer"},"sameAs":["https://www.instagram.com/release_coach/","https://www.google.com/maps?cid=7909192929721564540"]}
 </script>
 <script>document.documentElement.className+=' js';</script>
 </head>
@@ -80,9 +80,9 @@
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="kicker">Persönliche Begleitung</p>
-      <h1>Johannes Fischer</h1>
-      <p class="lead">Weg von Grübeln und Selbstabwertung, hin zu Klarheit und echtem Selbstwert.</p>
+      <p class="kicker">Johannes Fischer · Release Coach</p>
+      <h1>1:1 Coaching, online oder vor Ort in Xanten</h1>
+      <p class="lead">Weg vom Grübeln, hin zu mehr Klarheit und Selbstwert.</p>
       <p class="hero-text">Du verstehst schon viel über dich und landest trotzdem immer wieder in denselben Gedankenkreisen. Genau dort schauen wir gemeinsam hin: Welche Gedanken laufen gerade ab? Was passiert körperlich? Welche Geschichte erzählst du dir darüber?</p>
       <div class="hero-cta">
         <div class="hero-gift">
@@ -223,7 +223,7 @@
       </li>
       <li>
         <h3>Fragebogen (freiwillig)</h3>
-        <p>Ein Anamnesebogen, den wir nur nutzen, wenn er sich für dich richtig anfühlt. Das Kennenlerngespräch geht auch ohne ihn.</p>
+        <p>Ein Vorab-Fragebogen, den wir nur nutzen, wenn er sich für dich richtig anfühlt. Das Kennenlerngespräch geht auch ohne ihn.</p>
       </li>
       <li>
         <h3>Zielklärung</h3>
@@ -309,7 +309,7 @@
       </div>
 
       <div class="offer-group">
-        <h3 class="group-title">Mitgliedschaften</h3>
+        <h3 class="group-title" id="laufende-begleitung">Laufende Begleitung</h3>
         <ul class="offers">
           <li class="offer">
             <div class="offer-top">
@@ -482,9 +482,33 @@
       <div class="contact-cta">
         <a class="btn btn-light btn-lg" href="https://wa.me/491736289187?text=Hallo%20Johannes%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20unverbindliches%20Kennenlerngespr%C3%A4ch%20und%20w%C3%BCrde%20gerne%20kurz%20schauen%2C%20ob%20Deine%20Begleitung%20gerade%20zu%20meinem%20Thema%20passt" target="_blank" rel="noopener">Kennenlerngespräch anfragen</a>
         <a class="btn btn-gold btn-lg" href="https://bc2cb3da.sibforms.com/serve/MUIFAJO5Aaq8Q-L8ME5C0bmeWpciAulMvIboxKs2_8GwHY4pw1wSA3NEGLPQdqmkzlaiPOa0AFC3SebU4FIWc-fOFWNzHI5ZPOaomhay47IJsoWMtYYN1-hPAGyUnSo4rpiPRRio-33y-gQ7QOrFiMpm2bNGhgyWVqz9HWlRnIe9xonscYe1npSNPoqHyMx2aAXGeeO-jFhiPWzA" target="_blank" rel="noopener">Coaching-Geschenk sichern</a>
+        <button type="button" class="btn btn-ghost btn-lg" id="schreib-mir-btn" aria-expanded="false" aria-controls="kontaktformular">Schreib mir</button>
       </div>
+      <form class="contact-form" id="kontaktformular" hidden novalidate>
+        <h3 class="sr">Nachricht an Johannes</h3>
+        <p class="contact-form-error" id="kontaktformular-fehler" role="alert" hidden tabindex="-1"></p>
+        <p>
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required>
+        </p>
+        <p>
+          <label for="cf-email">E-Mail</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+        </p>
+        <p>
+          <label for="cf-zeiten">Wunschzeiten <span class="optional">(optional)</span></label>
+          <input id="cf-zeiten" name="zeiten" type="text" autocomplete="off" placeholder="z. B. freitags vormittags oder abends">
+        </p>
+        <p>
+          <label for="cf-nachricht">Nachricht</label>
+          <textarea id="cf-nachricht" name="nachricht" rows="5" required></textarea>
+        </p>
+        <button type="submit" class="btn btn-light">Abschicken</button>
+      </form>
+      <p class="contact-form-done" id="kontaktformular-hinweis" hidden tabindex="-1">Dein E-Mail-Programm sollte sich jetzt mit der Nachricht öffnen. Wenn das nicht klappt, schreib mir einfach direkt an <a href="mailto:johannesfischer@release-coach.de">johannesfischer@release-coach.de</a> oder ruf an unter <a href="tel:+491736289187">0173 6289187</a>.</p>
       <ul class="contact-lines">
         <li><a class="contact-line" href="mailto:johannesfischer@release-coach.de">johannesfischer@release-coach.de</a></li>
+        <li><a class="contact-line" href="tel:+491736289187">0173 6289187</a></li>
         <li><a class="contact-line" href="https://www.instagram.com/release_coach/" target="_blank" rel="noopener">Instagram @release_coach</a></li>
       </ul>
     </div>
@@ -549,6 +573,100 @@
 <script>
 (function(){var d=document.getElementById('mehr-ueber-mich'),b=document.getElementById('mehr-schliessen');if(!d||!b)return;
 b.addEventListener('click',function(){d.open=false;d.scrollIntoView({block:'center'});d.querySelector('summary').focus({preventScroll:true});});})();
+</script>
+<script>
+(function(){
+  var form=document.getElementById('kontaktformular');
+  var openBtn=document.getElementById('schreib-mir-btn');
+  var done=document.getElementById('kontaktformular-hinweis');
+  var err=document.getElementById('kontaktformular-fehler');
+  if(!form||!openBtn)return;
+
+  function openForm(){
+    form.hidden=false;
+    openBtn.setAttribute('aria-expanded','true');
+    form.scrollIntoView({block:'start'});
+    var first=form.querySelector('input,textarea');
+    if(first) first.focus({preventScroll:true});
+  }
+  openBtn.addEventListener('click',openForm);
+
+  function payload(){
+    return {
+      name:(form.elements.name.value||'').trim(),
+      email:(form.elements.email.value||'').trim(),
+      zeiten:(form.elements.zeiten.value||'').trim(),
+      nachricht:(form.elements.nachricht.value||'').trim()
+    };
+  }
+
+  function validate(data){
+    if(!data.name) return 'Bitte trag deinen Namen ein.';
+    if(!data.email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return 'Bitte trag eine gültige E-Mail-Adresse ein.';
+    if(!data.nachricht) return 'Bitte schreib eine kurze Nachricht.';
+    return '';
+  }
+
+  function buildMailto(data){
+    var body=[
+      'Name: '+data.name,
+      'E-Mail: '+data.email,
+      'Wunschzeiten: '+(data.zeiten||'–'),
+      '',
+      'Nachricht:',
+      data.nachricht
+    ].join('\n');
+    return 'mailto:johannesfischer@release-coach.de?subject='+encodeURIComponent('Anfrage über release-coach.de')+'&body='+encodeURIComponent(body);
+  }
+
+  /* Später nur send() umstellen: statt sendViaMailto(data) dann sendViaWorker(data).
+     Beispiel:
+     function sendViaWorker(data){
+       return fetch('https://…workers.dev/kontakt',{
+         method:'POST',
+         headers:{'content-type':'application/json'},
+         body:JSON.stringify(data)
+       }).then(function(res){ if(!res.ok) throw new Error('send-failed'); });
+     }
+  */
+  function sendViaMailto(data){
+    var href=buildMailto(data);
+    form.setAttribute('data-last-mailto',href);
+    var a=form.querySelector('.cf-mailto');
+    if(!a){
+      a=document.createElement('a');
+      a.className='cf-mailto';
+      a.hidden=true;
+      form.appendChild(a);
+    }
+    a.setAttribute('href',href);
+    a.click();
+  }
+
+  function send(data){
+    sendViaMailto(data);
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var data=payload();
+    var msg=validate(data);
+    if(msg){
+      err.hidden=false;
+      err.textContent=msg;
+      err.focus();
+      return;
+    }
+    err.hidden=true;
+    send(data);
+    form.hidden=true;
+    if(done){
+      done.hidden=false;
+      done.scrollIntoView({block:'start'});
+      done.focus();
+    }
+  });
+})();
 </script>
 </body>
 </html>
