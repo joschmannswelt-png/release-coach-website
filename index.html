@@ -146,15 +146,52 @@
           <li><span>Du beantwortest vorab ein paar kurze Fragen, damit ich mich auf dich und dein Thema vorbereiten kann. Das ist freiwillig.</span></li>
           <li><span>Wir sprechen 30 Minuten ganz bei deinem Thema.</span></li>
         </ol>
-        <p class="gift-alt-lead only-mobile">Oder direkt:</p>
-        <a class="btn btn-outline gift-alt only-mobile" href="https://wa.me/491736289187?text=Hallo%20Johannes%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20unverbindliches%20Kennenlerngespr%C3%A4ch%20und%20w%C3%BCrde%20gerne%20kurz%20schauen%2C%20ob%20Deine%20Begleitung%20gerade%20zu%20meinem%20Thema%20passt" target="_blank" rel="noopener">Unverbindliches Kennenlerngespräch</a>
       </article>
-      <article class="intro-call hide-mobile">
+      <article class="intro-call choice" id="kennenlernen" aria-labelledby="kennenlernen-titel">
         <p class="tag tag-green">Unverbindlich</p>
-        <h3>Unverbindliches Kennenlerngespräch</h3>
-        <p>Du erzählst in Ruhe, wo du stehst. Wir klären Auftrag und Passung, Erwartungen und Rahmen. Ohne Newsletter-Anmeldung.</p>
-        <a class="btn btn-green" href="https://wa.me/491736289187?text=Hallo%20Johannes%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20unverbindliches%20Kennenlerngespr%C3%A4ch%20und%20w%C3%BCrde%20gerne%20kurz%20schauen%2C%20ob%20Deine%20Begleitung%20gerade%20zu%20meinem%20Thema%20passt" target="_blank" rel="noopener">Kennenlerngespräch per WhatsApp anfragen</a>
-        <p class="small-note">Lieber per E-Mail? <a href="mailto:johannesfischer@release-coach.de?subject=Kennenlerngespr%C3%A4ch">johannesfischer@release-coach.de</a></p>
+        <h3 id="kennenlernen-titel">Unverbindliches Kennenlerngespräch</h3>
+        <p class="choice-lead">Du erzählst in Ruhe, wo du stehst. Wir klären Auftrag und Passung, Erwartungen und Rahmen. Ohne Newsletter-Anmeldung.</p>
+        <p class="choice-ask">Wie möchtest du anfragen? Beide Wege sind unverbindlich.</p>
+        <div class="choice-options">
+          <div class="choice-option">
+            <h4 class="choice-title">Per E-Mail anfragen</h4>
+            <p class="choice-text">Du füllst hier auf der Seite ein kurzes Formular aus. Ich melde mich dann persönlich per E-Mail bei dir.</p>
+            <button type="button" class="btn btn-green" id="kl-mail-btn" aria-expanded="false" aria-controls="kennenlern-formular">Formular öffnen</button>
+          </div>
+          <div class="choice-option">
+            <h4 class="choice-title">Direkt per WhatsApp</h4>
+            <p class="choice-text">WhatsApp öffnet sich mit einem vorbereiteten Text an mich. Du kannst ihn noch ändern, bevor du ihn abschickst.</p>
+            <a class="btn btn-green" href="https://wa.me/491736289187?text=Hallo%20Johannes%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20unverbindliches%20Kennenlerngespr%C3%A4ch%20und%20w%C3%BCrde%20gerne%20kurz%20schauen%2C%20ob%20Deine%20Begleitung%20gerade%20zu%20meinem%20Thema%20passt" target="_blank" rel="noopener">WhatsApp öffnen</a>
+          </div>
+        </div>
+        <form class="site-form choice-form" id="kennenlern-formular" hidden novalidate>
+          <h4 class="choice-form-title">Anfrage für ein Kennenlerngespräch</h4>
+          <p class="form-error" id="kennenlern-fehler" role="alert" hidden tabindex="-1"></p>
+          <p>
+            <label for="kl-name">Name</label>
+            <input id="kl-name" name="name" type="text" autocomplete="name" maxlength="200" required>
+          </p>
+          <p>
+            <label for="kl-email">E-Mail</label>
+            <input id="kl-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="200" required>
+          </p>
+          <p>
+            <label for="kl-anliegen">Worum geht es dir? <span class="optional">(optional)</span></label>
+            <textarea id="kl-anliegen" name="anliegen" rows="3" maxlength="2000" placeholder="Ein, zwei Sätze reichen."></textarea>
+          </p>
+          <p>
+            <label for="kl-zeiten">Wunschzeiten <span class="optional">(optional)</span></label>
+            <input id="kl-zeiten" name="zeiten" type="text" autocomplete="off" maxlength="300" placeholder="z. B. freitags vormittags oder abends">
+          </p>
+          <p class="hp" aria-hidden="true">
+            <label for="kl-website">Website</label>
+            <input id="kl-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </p>
+          <p class="gift-note">Deine Angaben kommen als E-Mail bei mir an. Ich nutze sie nur, um dir zu antworten. Mehr dazu steht in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+          <button type="submit" class="btn btn-green">Anfrage abschicken</button>
+        </form>
+        <p class="gift-form-done choice-done" id="kennenlern-hinweis" hidden tabindex="-1"></p>
+        <p class="small-note">Du kannst mir auch direkt schreiben: <a href="mailto:johannesfischer@release-coach.de?subject=Kennenlerngespr%C3%A4ch">johannesfischer@release-coach.de</a></p>
       </article>
     </div>
   </div>
@@ -215,7 +252,7 @@
     <div class="themes-foot">
       <p class="invite">Wenn du dich in einem dieser Punkte wiederfindest, lass uns sprechen.</p>
       <div class="btn-row">
-        <a class="btn btn-light" href="https://wa.me/491736289187?text=Hallo%20Johannes%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20unverbindliches%20Kennenlerngespr%C3%A4ch%20und%20w%C3%BCrde%20gerne%20kurz%20schauen%2C%20ob%20Deine%20Begleitung%20gerade%20zu%20meinem%20Thema%20passt" target="_blank" rel="noopener">Kennenlerngespräch anfragen</a>
+        <a class="btn btn-light" href="#kennenlernen">Kennenlerngespräch anfragen</a>
       </div>
     </div>
   </div>
@@ -286,7 +323,7 @@
     </figure>
 
     <div class="flow-foot">
-      <a class="btn btn-light" href="https://wa.me/491736289187?text=Hallo%20Johannes%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20unverbindliches%20Kennenlerngespr%C3%A4ch%20und%20w%C3%BCrde%20gerne%20kurz%20schauen%2C%20ob%20Deine%20Begleitung%20gerade%20zu%20meinem%20Thema%20passt" target="_blank" rel="noopener">Kennenlerngespräch anfragen</a>
+      <a class="btn btn-light" href="#kennenlernen">Kennenlerngespräch anfragen</a>
       <a class="textlink" href="https://wa.me/491736289187?text=Hallo%20Johannes%2C%20ich%20w%C3%BCrde%20gerne%20mehr%20dar%C3%BCber%20erfahren%2C%20wie%20deine%20Begleitung%20abl%C3%A4uft." target="_blank" rel="noopener">oder: Frage per WhatsApp stellen</a>
     </div>
   </div>
@@ -432,7 +469,7 @@
         </div>
       </details>
       <p class="boundary">Release Coach ist persönliche Begleitung und keine Psychotherapie.</p>
-      <a class="btn btn-green" href="https://wa.me/491736289187?text=Hallo%20Johannes%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20unverbindliches%20Kennenlerngespr%C3%A4ch%20und%20w%C3%BCrde%20gerne%20kurz%20schauen%2C%20ob%20Deine%20Begleitung%20gerade%20zu%20meinem%20Thema%20passt" target="_blank" rel="noopener">Kennenlerngespräch anfragen</a>
+      <a class="btn btn-green" href="#kennenlernen">Kennenlerngespräch anfragen</a>
     </div>
     </div>
   </div>
@@ -496,7 +533,7 @@
       <h2>Lass uns sprechen.</h2>
       <p class="big">Wenn du nicht sicher bist, ob meine Begleitung zu dir passt, schreib mir einfach. Ich antworte dir persönlich.</p>
       <div class="contact-cta">
-        <a class="btn btn-light btn-lg" href="https://wa.me/491736289187?text=Hallo%20Johannes%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20unverbindliches%20Kennenlerngespr%C3%A4ch%20und%20w%C3%BCrde%20gerne%20kurz%20schauen%2C%20ob%20Deine%20Begleitung%20gerade%20zu%20meinem%20Thema%20passt" target="_blank" rel="noopener">Kennenlerngespräch anfragen</a>
+        <a class="btn btn-light btn-lg" href="#kennenlernen">Kennenlerngespräch anfragen</a>
         <a class="btn btn-gold btn-lg" href="#geschenk">Coaching-Geschenk sichern</a>
         <button type="button" class="btn btn-ghost btn-lg" id="schreib-mir-btn" aria-expanded="false" aria-controls="kontaktformular">Schreib mir</button>
       </div>
@@ -694,6 +731,74 @@ b.addEventListener('click',function(){d.open=false;d.scrollIntoView({block:'cent
       sendViaWorker('/kontakt', data).then(function(){
         finish(false);
       }).catch(function(ex){
+        if(ex && ex.status && ex.status>=400 && ex.status<500 && ex.status!==429){
+          setError(err, ex.userMessage || 'Bitte prüfe deine Angaben.');
+          if(btn) btn.disabled=false;
+          return;
+        }
+        sendViaMailto(data);
+        finish(true);
+      });
+    });
+  })();
+
+  /* ----- Kennenlerngespräch: Auswahl und Formular ----- */
+  (function(){
+    var form=document.getElementById('kennenlern-formular');
+    var openBtn=document.getElementById('kl-mail-btn');
+    var done=document.getElementById('kennenlern-hinweis');
+    var err=document.getElementById('kennenlern-fehler');
+    if(!form||!openBtn) return;
+
+    openBtn.addEventListener('click', function(){
+      form.hidden=false;
+      openBtn.setAttribute('aria-expanded','true');
+      form.scrollIntoView({block:'start'});
+      var first=form.querySelector('input:not([tabindex="-1"])');
+      if(first) first.focus({preventScroll:true});
+    });
+
+    function payload(){
+      var anliegen=(form.elements.anliegen.value||'').trim();
+      return {
+        typ:'kennenlernen',
+        name:(form.elements.name.value||'').trim(),
+        email:(form.elements.email.value||'').trim(),
+        zeiten:(form.elements.zeiten.value||'').trim(),
+        nachricht:'Anfrage für ein unverbindliches Kennenlerngespräch.\n\nWorum es geht: '+(anliegen||'–'),
+        website:(form.elements.website && form.elements.website.value)||'',
+        startedAt:startedAt
+      };
+    }
+    function validate(data){
+      if(!data.name) return 'Bitte trag deinen Namen ein.';
+      if(!data.email||!emailRe.test(data.email)) return 'Bitte trag eine gültige E-Mail-Adresse ein.';
+      return '';
+    }
+    function sendViaMailto(data){
+      var body=['Name: '+data.name,'E-Mail: '+data.email,'Wunschzeiten: '+(data.zeiten||'–'),'',data.nachricht].join('\n');
+      var a=document.createElement('a'); a.hidden=true;
+      a.href='mailto:johannesfischer@release-coach.de?subject='+encodeURIComponent('Kennenlerngespräch')+'&body='+encodeURIComponent(body);
+      form.appendChild(a); a.click();
+    }
+    function finish(fallback){
+      form.hidden=true;
+      done.innerHTML=fallback
+        ? 'Dein E-Mail-Programm sollte sich jetzt mit der Anfrage öffnen. Wenn das nicht klappt, schreib mir einfach direkt an <a href="mailto:johannesfischer@release-coach.de">johannesfischer@release-coach.de</a> oder ruf an unter <a href="tel:+491736289187">0173 6289187</a>.'
+        : 'Danke dir, deine Anfrage ist bei mir angekommen. Ich melde mich persönlich per E-Mail bei dir.';
+      done.hidden=false;
+      done.scrollIntoView({block:'center'});
+      done.focus({preventScroll:true});
+    }
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var data=payload();
+      var msg=validate(data);
+      if(msg){ setError(err, msg); return; }
+      setError(err, '');
+      var btn=form.querySelector('button[type="submit"]');
+      if(btn) btn.disabled=true;
+      sendViaWorker('/kontakt', data).then(function(){ finish(false); }).catch(function(ex){
         if(ex && ex.status && ex.status>=400 && ex.status<500 && ex.status!==429){
           setError(err, ex.userMessage || 'Bitte prüfe deine Angaben.');
           if(btn) btn.disabled=false;

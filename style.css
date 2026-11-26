@@ -796,3 +796,36 @@ h3,h4{color:var(--ink)}
 @media (min-width:600px){
   .contact-form .btn{width:auto}
 }
+
+/* v13: Kennenlerngespräch – ruhige Auswahl zwischen E-Mail und WhatsApp */
+#kennenlernen{scroll-margin-top:76px}
+.choice{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+.choice .btn{margin-top:0}
+.choice-lead{font-size:1.04rem;line-height:1.6}
+.choice-ask{font-weight:650;margin-top:4px}
+.choice-options{display:grid;gap:14px}
+.choice-option{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.choice-title{font-family:var(--sans);font-size:1.1rem;font-weight:750;line-height:1.3;color:var(--green);margin:0}
+.choice-text{font-size:.98rem;line-height:1.55;margin:0;flex:1}
+.choice-option .btn{width:100%;margin-top:6px}
+.choice-form{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:20px;margin-top:0}
+.choice-form[hidden],.choice-done[hidden]{display:none}
+.choice-form-title{font-family:var(--sans);font-size:1.1rem;font-weight:750;color:var(--green);margin:0}
+.choice-form .btn{width:100%}
+.choice-done{background:#fff;border-radius:16px;padding:20px;line-height:1.6}
+.choice .small-note{margin-top:2px}
+@media (min-width:700px){
+  .choice-options{grid-template-columns:1fr 1fr;gap:18px}
+  .choice-option .btn,.choice-form .btn{width:auto;align-self:flex-start;justify-self:start}
+}
+@media (min-width:1000px){
+  .intro-call.choice{display:flex;padding:clamp(28px,3.5vw,44px) clamp(28px,4vw,52px)}
+  .intro-call.choice .tag,.intro-call.choice h3{margin-bottom:0}
+  .intro-call.choice .btn{margin:6px 0 0}
+  .intro-call.choice .small-note{margin:2px 0 0}
+  .choice-form{max-width:44rem}
+}
+#coaching-geschenk .intro-call.choice{display:flex;flex-direction:column;align-items:stretch}
+#coaching-geschenk .intro-call.choice .btn{grid-column:auto;grid-row:auto;margin:6px 0 0;align-self:stretch}
+#coaching-geschenk .intro-call.choice .small-note{grid-column:auto;grid-row:auto;margin:2px 0 0}
+@media (min-width:700px){#coaching-geschenk .intro-call.choice .btn{align-self:flex-start}.choice-options,.choice-lead,.choice-ask{max-width:52rem}}
