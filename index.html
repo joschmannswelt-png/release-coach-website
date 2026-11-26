@@ -47,7 +47,7 @@
       <a href="#aktuell">Aktuell</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <a class="bar-cta" href="https://bc2cb3da.sibforms.com/serve/MUIFAJO5Aaq8Q-L8ME5C0bmeWpciAulMvIboxKs2_8GwHY4pw1wSA3NEGLPQdqmkzlaiPOa0AFC3SebU4FIWc-fOFWNzHI5ZPOaomhay47IJsoWMtYYN1-hPAGyUnSo4rpiPRRio-33y-gQ7QOrFiMpm2bNGhgyWVqz9HWlRnIe9xonscYe1npSNPoqHyMx2aAXGeeO-jFhiPWzA" target="_blank" rel="noopener">Coaching-Geschenk</a>
+    <a class="bar-cta" href="#geschenk">Coaching-Geschenk</a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü öffnen">
       <span class="burger-label">Menü</span>
       <span class="burger-icon" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -69,7 +69,7 @@
     <a href="#kontakt">Kontakt</a>
   </nav>
   <div class="menu-foot">
-    <a class="btn btn-gold btn-block" href="https://bc2cb3da.sibforms.com/serve/MUIFAJO5Aaq8Q-L8ME5C0bmeWpciAulMvIboxKs2_8GwHY4pw1wSA3NEGLPQdqmkzlaiPOa0AFC3SebU4FIWc-fOFWNzHI5ZPOaomhay47IJsoWMtYYN1-hPAGyUnSo4rpiPRRio-33y-gQ7QOrFiMpm2bNGhgyWVqz9HWlRnIe9xonscYe1npSNPoqHyMx2aAXGeeO-jFhiPWzA" target="_blank" rel="noopener">Coaching-Geschenk sichern</a>
+    <a class="btn btn-gold btn-block" href="#geschenk">Coaching-Geschenk sichern</a>
     <a class="menu-mail" href="mailto:johannesfischer@release-coach.de">johannesfischer@release-coach.de</a>
   </div>
 </div>
@@ -86,7 +86,7 @@
       <p class="hero-text">Du verstehst schon viel über dich und landest trotzdem immer wieder in denselben Gedankenkreisen. Genau dort schauen wir gemeinsam hin: Welche Gedanken laufen gerade ab? Was passiert körperlich? Welche Geschichte erzählst du dir darüber?</p>
       <div class="hero-cta">
         <div class="hero-gift">
-          <a class="btn btn-gold btn-lg" href="https://bc2cb3da.sibforms.com/serve/MUIFAJO5Aaq8Q-L8ME5C0bmeWpciAulMvIboxKs2_8GwHY4pw1wSA3NEGLPQdqmkzlaiPOa0AFC3SebU4FIWc-fOFWNzHI5ZPOaomhay47IJsoWMtYYN1-hPAGyUnSo4rpiPRRio-33y-gQ7QOrFiMpm2bNGhgyWVqz9HWlRnIe9xonscYe1npSNPoqHyMx2aAXGeeO-jFhiPWzA" target="_blank" rel="noopener">Dein Coaching-Geschenk</a>
+          <a class="btn btn-gold btn-lg" href="#geschenk">Dein Coaching-Geschenk</a>
           <p class="hero-gift-note">30 Minuten persönlich mit mir, zu deinem Thema</p>
         </div>
         <a class="textlink hide-mobile" href="#angebote">Angebote &amp; Preise ansehen</a>
@@ -122,11 +122,27 @@
           <p class="tag tag-brown">Kostenlos</p>
           <h3>Dein Coaching-Geschenk</h3>
           <p class="gift-lead">Ich schenke dir 30 Minuten persönliches Coaching zu einem Thema, das dich gerade beschäftigt.</p>
-          <a class="btn btn-gold" href="https://bc2cb3da.sibforms.com/serve/MUIFAJO5Aaq8Q-L8ME5C0bmeWpciAulMvIboxKs2_8GwHY4pw1wSA3NEGLPQdqmkzlaiPOa0AFC3SebU4FIWc-fOFWNzHI5ZPOaomhay47IJsoWMtYYN1-hPAGyUnSo4rpiPRRio-33y-gQ7QOrFiMpm2bNGhgyWVqz9HWlRnIe9xonscYe1npSNPoqHyMx2aAXGeeO-jFhiPWzA" target="_blank" rel="noopener">Coaching-Geschenk sichern</a>
-          <p class="gift-note">Das Coaching-Geschenk gibt es zusammen mit meinem monatlichen Newsletter. Du kannst ihn jederzeit abbestellen. Ohne Newsletter geht es über das unverbindliche Kennenlerngespräch.</p>
+          <form class="site-form" id="geschenk-formular" novalidate>
+            <p class="form-error" id="geschenk-fehler" role="alert" hidden tabindex="-1"></p>
+            <p>
+              <label for="gf-name">Name <span class="optional">(optional)</span></label>
+              <input id="gf-name" name="name" type="text" autocomplete="name" maxlength="200">
+            </p>
+            <p>
+              <label for="gf-email">E-Mail</label>
+              <input id="gf-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="200" required>
+            </p>
+            <p class="hp" aria-hidden="true">
+              <label for="gf-website">Website</label>
+              <input id="gf-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </p>
+            <p class="gift-note">Das Coaching-Geschenk gibt es zusammen mit meinem monatlichen Newsletter. Du kannst ihn jederzeit abbestellen. Ohne Newsletter geht es über das unverbindliche Kennenlerngespräch. Wie ich deine Daten verarbeite, steht in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+            <button type="submit" class="btn btn-gold">Coaching-Geschenk sichern</button>
+          </form>
+          <p class="gift-form-done" id="geschenk-hinweis" hidden tabindex="-1">Danke dir. Schau jetzt bitte in dein E-Mail-Postfach und bestätige deine Anmeldung. Danach erhältst du direkt Zugang zu deinem Coaching-Geschenk. Falls du die E-Mail nicht findest, schau bitte auch kurz in deinen Spam- oder Werbeordner.</p>
         </div>
         <ol class="gift-steps">
-          <li><span>Du trägst deinen Vornamen und deine E-Mail-Adresse ein und bestätigst die Anmeldung per E-Mail.</span></li>
+          <li><span>Du trägst deine E-Mail-Adresse ein, und wenn du möchtest auch deinen Namen, und bestätigst die Anmeldung per E-Mail.</span></li>
           <li><span>Du beantwortest vorab ein paar kurze Fragen, damit ich mich auf dich und dein Thema vorbereiten kann. Das ist freiwillig.</span></li>
           <li><span>Wir sprechen 30 Minuten ganz bei deinem Thema.</span></li>
         </ol>
@@ -481,7 +497,7 @@
       <p class="big">Wenn du nicht sicher bist, ob meine Begleitung zu dir passt, schreib mir einfach. Ich antworte dir persönlich.</p>
       <div class="contact-cta">
         <a class="btn btn-light btn-lg" href="https://wa.me/491736289187?text=Hallo%20Johannes%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20unverbindliches%20Kennenlerngespr%C3%A4ch%20und%20w%C3%BCrde%20gerne%20kurz%20schauen%2C%20ob%20Deine%20Begleitung%20gerade%20zu%20meinem%20Thema%20passt" target="_blank" rel="noopener">Kennenlerngespräch anfragen</a>
-        <a class="btn btn-gold btn-lg" href="https://bc2cb3da.sibforms.com/serve/MUIFAJO5Aaq8Q-L8ME5C0bmeWpciAulMvIboxKs2_8GwHY4pw1wSA3NEGLPQdqmkzlaiPOa0AFC3SebU4FIWc-fOFWNzHI5ZPOaomhay47IJsoWMtYYN1-hPAGyUnSo4rpiPRRio-33y-gQ7QOrFiMpm2bNGhgyWVqz9HWlRnIe9xonscYe1npSNPoqHyMx2aAXGeeO-jFhiPWzA" target="_blank" rel="noopener">Coaching-Geschenk sichern</a>
+        <a class="btn btn-gold btn-lg" href="#geschenk">Coaching-Geschenk sichern</a>
         <button type="button" class="btn btn-ghost btn-lg" id="schreib-mir-btn" aria-expanded="false" aria-controls="kontaktformular">Schreib mir</button>
       </div>
       <form class="contact-form" id="kontaktformular" hidden novalidate>
@@ -489,23 +505,27 @@
         <p class="contact-form-error" id="kontaktformular-fehler" role="alert" hidden tabindex="-1"></p>
         <p>
           <label for="cf-name">Name</label>
-          <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          <input id="cf-name" name="name" type="text" autocomplete="name" maxlength="200" required>
         </p>
         <p>
           <label for="cf-email">E-Mail</label>
-          <input id="cf-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+          <input id="cf-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="200" required>
         </p>
         <p>
           <label for="cf-zeiten">Wunschzeiten <span class="optional">(optional)</span></label>
-          <input id="cf-zeiten" name="zeiten" type="text" autocomplete="off" placeholder="z. B. freitags vormittags oder abends">
+          <input id="cf-zeiten" name="zeiten" type="text" autocomplete="off" maxlength="300" placeholder="z. B. freitags vormittags oder abends">
         </p>
         <p>
           <label for="cf-nachricht">Nachricht</label>
-          <textarea id="cf-nachricht" name="nachricht" rows="5" required></textarea>
+          <textarea id="cf-nachricht" name="nachricht" rows="5" maxlength="5000" required></textarea>
+        </p>
+        <p class="hp" aria-hidden="true">
+          <label for="cf-website">Website</label>
+          <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
         </p>
         <button type="submit" class="btn btn-light">Abschicken</button>
       </form>
-      <p class="contact-form-done" id="kontaktformular-hinweis" hidden tabindex="-1">Dein E-Mail-Programm sollte sich jetzt mit der Nachricht öffnen. Wenn das nicht klappt, schreib mir einfach direkt an <a href="mailto:johannesfischer@release-coach.de">johannesfischer@release-coach.de</a> oder ruf an unter <a href="tel:+491736289187">0173 6289187</a>.</p>
+      <p class="contact-form-done" id="kontaktformular-hinweis" hidden tabindex="-1"></p>
       <ul class="contact-lines">
         <li><a class="contact-line" href="mailto:johannesfischer@release-coach.de">johannesfischer@release-coach.de</a></li>
         <li><a class="contact-line" href="tel:+491736289187">0173 6289187</a></li>
@@ -576,96 +596,166 @@ b.addEventListener('click',function(){d.open=false;d.scrollIntoView({block:'cent
 </script>
 <script>
 (function(){
-  var form=document.getElementById('kontaktformular');
-  var openBtn=document.getElementById('schreib-mir-btn');
-  var done=document.getElementById('kontaktformular-hinweis');
-  var err=document.getElementById('kontaktformular-fehler');
-  if(!form||!openBtn)return;
+  var WORKER_URL='https://release-coach-formulare.johannesfischer.workers.dev';
+  var startedAt=Date.now();
+  var emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  function openForm(){
-    form.hidden=false;
-    openBtn.setAttribute('aria-expanded','true');
-    form.scrollIntoView({block:'start'});
-    var first=form.querySelector('input,textarea');
-    if(first) first.focus({preventScroll:true});
+  function show(el, on){ if(el) el.hidden=!on; }
+  function setError(box, msg){
+    if(!box) return;
+    if(msg){ box.textContent=msg; box.hidden=false; box.focus(); }
+    else { box.textContent=''; box.hidden=true; }
   }
-  openBtn.addEventListener('click',openForm);
-
-  function payload(){
-    return {
-      name:(form.elements.name.value||'').trim(),
-      email:(form.elements.email.value||'').trim(),
-      zeiten:(form.elements.zeiten.value||'').trim(),
-      nachricht:(form.elements.nachricht.value||'').trim()
-    };
-  }
-
-  function validate(data){
-    if(!data.name) return 'Bitte trag deinen Namen ein.';
-    if(!data.email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return 'Bitte trag eine gültige E-Mail-Adresse ein.';
-    if(!data.nachricht) return 'Bitte schreib eine kurze Nachricht.';
-    return '';
+  function sendViaWorker(path, data){
+    return fetch(WORKER_URL+path,{
+      method:'POST',
+      headers:{'content-type':'application/json'},
+      body:JSON.stringify(data)
+    }).then(function(res){
+      return res.json().catch(function(){ return {}; }).then(function(j){
+        if(res.ok && j && j.ok) return j;
+        var err=new Error((j && j.error) || 'send-failed');
+        err.status=res.status;
+        err.userMessage=(j && j.error) || '';
+        throw err;
+      });
+    });
   }
 
-  function buildMailto(data){
-    var body=[
-      'Name: '+data.name,
-      'E-Mail: '+data.email,
-      'Wunschzeiten: '+(data.zeiten||'–'),
-      '',
-      'Nachricht:',
-      data.nachricht
-    ].join('\n');
-    return 'mailto:johannesfischer@release-coach.de?subject='+encodeURIComponent('Anfrage über release-coach.de')+'&body='+encodeURIComponent(body);
-  }
+  /* ----- Kontakt ----- */
+  (function(){
+    var form=document.getElementById('kontaktformular');
+    var openBtn=document.getElementById('schreib-mir-btn');
+    var done=document.getElementById('kontaktformular-hinweis');
+    var err=document.getElementById('kontaktformular-fehler');
+    if(!form||!openBtn) return;
 
-  /* Später nur send() umstellen: statt sendViaMailto(data) dann sendViaWorker(data).
-     Beispiel:
-     function sendViaWorker(data){
-       return fetch('https://…workers.dev/kontakt',{
-         method:'POST',
-         headers:{'content-type':'application/json'},
-         body:JSON.stringify(data)
-       }).then(function(res){ if(!res.ok) throw new Error('send-failed'); });
-     }
-  */
-  function sendViaMailto(data){
-    var href=buildMailto(data);
-    form.setAttribute('data-last-mailto',href);
-    var a=form.querySelector('.cf-mailto');
-    if(!a){
-      a=document.createElement('a');
-      a.className='cf-mailto';
-      a.hidden=true;
-      form.appendChild(a);
+    function openForm(){
+      form.hidden=false;
+      openBtn.setAttribute('aria-expanded','true');
+      form.scrollIntoView({block:'start'});
+      var first=form.querySelector('input:not([tabindex="-1"]),textarea');
+      if(first) first.focus({preventScroll:true});
     }
-    a.setAttribute('href',href);
-    a.click();
-  }
+    openBtn.addEventListener('click', openForm);
 
-  function send(data){
-    sendViaMailto(data);
-  }
+    function payload(){
+      return {
+        name:(form.elements.name.value||'').trim(),
+        email:(form.elements.email.value||'').trim(),
+        zeiten:(form.elements.zeiten.value||'').trim(),
+        nachricht:(form.elements.nachricht.value||'').trim(),
+        website:(form.elements.website && form.elements.website.value)||'',
+        startedAt:startedAt
+      };
+    }
+    function validate(data){
+      if(!data.name) return 'Bitte trag deinen Namen ein.';
+      if(!data.email||!emailRe.test(data.email)) return 'Bitte trag eine gültige E-Mail-Adresse ein.';
+      if(!data.nachricht) return 'Bitte schreib eine kurze Nachricht.';
+      return '';
+    }
+    function buildMailto(data){
+      var body=['Name: '+data.name,'E-Mail: '+data.email,'Wunschzeiten: '+(data.zeiten||'–'),'','Nachricht:',data.nachricht].join('\n');
+      return 'mailto:johannesfischer@release-coach.de?subject='+encodeURIComponent('Anfrage über release-coach.de')+'&body='+encodeURIComponent(body);
+    }
+    function sendViaMailto(data){
+      var href=buildMailto(data);
+      form.setAttribute('data-last-mailto', href);
+      var a=form.querySelector('.cf-mailto');
+      if(!a){ a=document.createElement('a'); a.className='cf-mailto'; a.hidden=true; form.appendChild(a); }
+      a.setAttribute('href', href);
+      a.click();
+    }
+    function showThanks(){
+      done.innerHTML='Danke, deine Nachricht ist unterwegs. Ich antworte dir persönlich.';
+    }
+    function showFallback(){
+      done.innerHTML='Dein E-Mail-Programm sollte sich jetzt mit der Nachricht öffnen. Wenn das nicht klappt, schreib mir einfach direkt an <a href="mailto:johannesfischer@release-coach.de">johannesfischer@release-coach.de</a> oder ruf an unter <a href="tel:+491736289187">0173 6289187</a>.';
+    }
+    function finish(fallback){
+      form.hidden=true;
+      if(done){
+        if(fallback) showFallback(); else showThanks();
+        done.hidden=false;
+        done.scrollIntoView({block:'start'});
+        done.focus();
+      }
+    }
 
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var data=payload();
-    var msg=validate(data);
-    if(msg){
-      err.hidden=false;
-      err.textContent=msg;
-      err.focus();
-      return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var data=payload();
+      var msg=validate(data);
+      if(msg){ setError(err, msg); return; }
+      setError(err, '');
+      var btn=form.querySelector('button[type="submit"]');
+      if(btn) btn.disabled=true;
+      sendViaWorker('/kontakt', data).then(function(){
+        finish(false);
+      }).catch(function(ex){
+        if(ex && ex.status && ex.status>=400 && ex.status<500 && ex.status!==429){
+          setError(err, ex.userMessage || 'Bitte prüfe deine Angaben.');
+          if(btn) btn.disabled=false;
+          return;
+        }
+        sendViaMailto(data);
+        finish(true);
+      });
+    });
+  })();
+
+  /* ----- Coaching-Geschenk ----- */
+  (function(){
+    var form=document.getElementById('geschenk-formular');
+    var done=document.getElementById('geschenk-hinweis');
+    var err=document.getElementById('geschenk-fehler');
+    if(!form) return;
+
+    function payload(){
+      return {
+        name:(form.elements.name.value||'').trim(),
+        email:(form.elements.email.value||'').trim(),
+        website:(form.elements.website && form.elements.website.value)||'',
+        startedAt:startedAt
+      };
     }
-    err.hidden=true;
-    send(data);
-    form.hidden=true;
-    if(done){
-      done.hidden=false;
-      done.scrollIntoView({block:'start'});
-      done.focus();
+    function validate(data){
+      if(!data.email||!emailRe.test(data.email)) return 'Bitte trag eine gültige E-Mail-Adresse ein.';
+      return '';
     }
-  });
+
+    function focusGift(){
+      var field=document.getElementById('gf-email')||form.querySelector('input:not([tabindex="-1"])');
+      form.scrollIntoView({block:'start'});
+      if(field) field.focus({preventScroll:true});
+    }
+    document.querySelectorAll('a[href="#geschenk"]').forEach(function(a){
+      a.addEventListener('click', function(){ setTimeout(focusGift, 0); });
+    });
+    if(location.hash==='#geschenk') setTimeout(focusGift, 100);
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var data=payload();
+      var msg=validate(data);
+      if(msg){ setError(err, msg); return; }
+      setError(err, '');
+      var btn=form.querySelector('button[type="submit"]');
+      if(btn) btn.disabled=true;
+      sendViaWorker('/geschenk', data).then(function(){
+        form.hidden=true;
+        if(done){
+          done.hidden=false;
+          done.scrollIntoView({block:'start'});
+          done.focus();
+        }
+      }).catch(function(ex){
+        setError(err, (ex && ex.userMessage) || 'Das hat gerade nicht geklappt. Bitte versuche es in ein paar Minuten noch einmal, oder schreib mir direkt an johannesfischer@release-coach.de.');
+        if(btn) btn.disabled=false;
+      });
+    });
+  })();
 })();
 </script>
 </body>
